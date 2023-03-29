@@ -7,29 +7,35 @@
 }
 /* Header */
 .header {
+  display: flex;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  display: flex;
   align-items: center;
   position: relative;
   background-color: #f2f2f2;
   overflow: hidden;
 }
+.logo {
+  width: 183px;
+  height: 32px;
+  background-size: contain;
+}
 .logo_place_header {
+  background-image: url(../images/logo_place_header.png);
   position: absolute;
   top: 30px;
   left: 64px;
 }
 .header__title {
-  display: flex;
-  align-items: center;
-  margin: 0 0 0 64px;
-  line-height: 96px;
+  max-width: 730px;
+  line-height: 1;
   font-size: 102px;
-  font-weight: 600;
-  width: 730px;
-  z-index: 3;
+  font-weight: bold;
+  align-self: center;
+  position: relative;
+  left: 64px;
+  margin: 0;
 }
 .header__subtitle {
   margin: 0;
@@ -45,6 +51,7 @@
 }
 .header__subtitle-link {
   text-decoration: none;
+  color: #2f80ed;
 }
 .header__main-illustration {
   width: 765px;
@@ -94,16 +101,21 @@
   min-width: 784px;
 }
 .two-columns__paragraph {
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
   padding: 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
+.two-columns__paragraph:last-child{
+  margin: 0;
+  padding: 0;
+}
 .description {
   display: flex;
   justify-content: center;
   padding-top: 100px;
+  /* Отступ по макету в 100px - это не ошибка!Валерия */
 }
 /* Digits */
 .digits {
@@ -111,12 +123,6 @@
   flex-direction: column;
   align-items: center;
   padding: 100px 0;
-}
-.container {
-  display: flex;
-  width: 1100px;
-  flex-direction: column;
-  align-items: center;
 }
 .table {
   display: flex;
@@ -134,19 +140,20 @@
   line-height: 1.2;
   font-size: 18px;
 }
-.table__text-subheader {
-  margin-top: 20px;
-}
+
 /* FEYNMAN */
 .feynman {
   display: flex;
   flex-direction: column;
   min-height: 790px;
+  /* box-sizing: border-box; тут не нужен потому что по макету буквы также ложаться как и на макете, если добавить бордер то буквы съезжают, Валерия*/
   padding-top: 100px;
   position: relative;
+  background-color: #f2f2f2;
 }
 .section-title_theme_dark{
   color: white;
+  z-index: 1;
 }
 .section-subtitle_theme_dark{
   color: white;
@@ -243,6 +250,7 @@
 }
 /* footer */
 .footer {
+  box-sizing: border-box;
   min-height: 350px;
   background-color: #1f1f1f;
   padding-top: 60px;
@@ -265,7 +273,7 @@
 }
 .logo {
   background-size: contain;
-  width: 183px;
+  width: 228px;
   height: 32px;
   background-repeat: no-repeat;
 }
@@ -304,4 +312,5 @@
   font-size: 18px;
   font-weight: normal;
   line-height: 30px;
+  list-style-type: none;
 }
