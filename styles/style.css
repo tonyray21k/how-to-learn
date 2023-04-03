@@ -29,7 +29,7 @@
   font-weight: bold;
   align-self: center;
   position: relative;
-  left: 64px;
+  padding-left: 64px;
   margin: 0;
 }
 .header__subtitle {
@@ -65,9 +65,7 @@
   right: 0;
 }
 /* Content */
-.content {
-  margin-top: 100px;
-}
+
 .two-columns {
   width: 80%;
   display: flex;
@@ -140,8 +138,8 @@
 .feynman {
   display: flex;
   flex-direction: column;
-  min-height: 790px;
-  /* box-sizing: border-box; тут не нужен потому что по макету буквы также ложаться как и на макете, если добавить бордер то буквы съезжают, Валерия*/
+  min-height: 890px;
+  box-sizing: border-box;
   padding-top: 100px;
   position: relative;
   background-color: #f2f2f2;
