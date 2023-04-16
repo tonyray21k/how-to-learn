@@ -7,3 +7,6 @@
 .resources__logo:nth-child(1){
   cursor: pointer;
 }
+.resources__logo:hover {
+  opacity: 0.6;
+}
